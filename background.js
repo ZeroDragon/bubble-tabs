@@ -1,5 +1,5 @@
 import { populateStorage, saveStorage } from './storage.js'
-const cache = { autoRemove: true, maxTabs: 10, deleted: [] }
+const cache = { autoRemove: false, maxTabs: 10, deleted: [] }
 populateStorage(cache, true)
 
 const move = async activeInfo => {
