@@ -1,0 +1,46 @@
+body {
+  width: 300px;
+  background-color: #202124;
+  color: #fff;
+}
+img {
+  width: 25px;
+}
+input[type="text"] {
+  width: 25px;
+}
+form {
+  text-align: left;
+}
+label {
+  display: block;
+  padding: 6px;
+}
+input {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+ul{
+  padding: 0;
+  max-height: 100px;
+  overflow: auto;
+  list-style: none;
+}
+li {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+a {
+  color: inherit;
+  white-space: nowrap;
+  text-decoration: underline;
+  cursor: pointer;
+}
+li span {
+  margin-right: 4px;
+}
+li span.deleter {
+  cursor: pointer;
+}

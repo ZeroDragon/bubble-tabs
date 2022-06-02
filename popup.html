@@ -2,21 +2,27 @@
 <html>
   <head>
     <title>Bubble tabs!</title>
-    <style>
-      body {
-        width: 300px;
-        background-color: #202124;
-        color: #fff;
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="./popup.css">
   </head>
   <body>
-    <img src="/images/icon128.png" />
-    <br/>
-    <h1>
-      Bubble tabs!
-    </h1>
-    <p>This extension moves the active tab to the first position. Nothing more, nothing else</p>
+    <h1><img src="/images/icon128.png" /> Bubble tabs</h1>
+    <p>This extension moves the active tab to the first position. Also auto deletes old tabs</p>
+    <h3>Configuration</h3>
+    <form id="optionsForm">
+      <label for="autoRemove">
+        <input type="checkbox" name="autoRemove" id="autoRemove" />
+        Enable auto remove old tabs
+      </label>
+      <label for="maxTabs">
+        <input type="text" name="maxTabs" id="maxTabs" />
+        Maximum number of tabs
+      </label>
+    </form>
+    <h3>Collected tabs <a id="clearCollected">[clear all]</a></h3>
+    <template id="liTemplate">
+      <li><span class="deleter">[x]</span><span class="index"></span><a target="_blanK"></a></li>
+    </template>
+    <ul id="collectedTabs"></ul>
+  <script src="./popup.js" type="module"></script>
   </body>
 </html>
